@@ -1,0 +1,40 @@
+package hangman2;
+
+public class Mod1 {
+	public static void main(String[] args) {
+		 
+		
+	// that is how to declare a variable
+		
+		int x;
+		double y;
+		
+		
+		x = 9;
+		y = 8;
+		
+		// another way
+		int r = 7;
+		double w = 8;
+		
+		// or variable of the same type on the same line
+		int u = 4, l = 6, m = 2;
+		
+		
+		// Objects and String objects
+		String s = "hello";
+		// String expressions
+		String s1 = "hello";
+		String s2 = "there";
+		String combined = ( s1 + " " + s2);
+		
+		// to know how many characters in a String use < s.length> method
+		String s3 = "hello";
+		String s4 = "How are you?";
+		
+	    System.out.println("Length of s3 = " + s3.length());
+	    System.out.println("Length of s4 = " + s4.length());
+		
+	}
+
+}

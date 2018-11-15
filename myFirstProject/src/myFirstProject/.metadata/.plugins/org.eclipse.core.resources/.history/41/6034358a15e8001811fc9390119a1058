@@ -1,0 +1,12 @@
+package hangman2;
+
+import java.io.Reader;
+
+public class users {
+	public static Reader text;
+
+	public static void main(String[] args) {
+		String s = "John", d = "Rodena", l = "Bob";
+	}
+
+}

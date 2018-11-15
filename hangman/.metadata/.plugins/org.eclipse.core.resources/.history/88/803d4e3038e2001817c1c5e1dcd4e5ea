@@ -1,0 +1,14 @@
+package hangman2;
+
+public class Try {
+	public static void main(String[] args) {
+		String  firstName = "john";
+		String lastName = "Doe";
+		String fullName = "firstName + lastName";
+		System.out.println( fullName);
+		
+	
+		
+	}
+
+}

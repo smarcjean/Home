@@ -1,0 +1,21 @@
+import java.util.*;
+public class pick2 {
+	
+	public static void main(String[] args) {
+	
+		// calculate how many hours, minutes, and seconds in a year
+		int hours = 365 * 24;
+		int minutes = hours * 60;
+		int seconds = minutes * 60;
+		System.out.println("Seconds in a year = " + seconds);
+		
+		
+		
+				
+		
+		
+		
+		
+	}
+
+}

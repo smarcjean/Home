@@ -1,0 +1,10 @@
+
+public class Hello1 {
+ public static void main(String [] args) {
+	 System.out.println("Where are you?");
+	 System.out.println("I thought that you would come with us.");
+	 System.out.println();
+	 System.out.print("I need that.");
+	 System.out.print("Not again.");
+ }
+}
