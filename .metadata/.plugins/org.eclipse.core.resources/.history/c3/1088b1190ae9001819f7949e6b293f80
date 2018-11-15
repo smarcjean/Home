@@ -1,0 +1,12 @@
+package hangman;
+
+import java.io.*;
+
+public class StoreGameD {
+	public static void main(String[] args) {
+		File f = new File("hangman.java");
+		System.out.println("exists returns " + f.exists());
+		
+	}
+
+}
