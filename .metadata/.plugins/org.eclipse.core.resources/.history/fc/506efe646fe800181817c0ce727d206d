@@ -47,7 +47,7 @@ public class hangman2 {
 				
 			
 		
-		// I will come tomorrow
+		
 		
 		  if (!wordIsGuessed)  System.out.println("You ran out of guesses./");{
 				 System.out.println("Do you want to play again? (Yes/No");
