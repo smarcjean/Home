@@ -1,7 +1,39 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ListLists {
+	
+	static List<User> users = new ArrayList<User>();
+	
+	public static void printList() {
+		for(User user : users) {
+			System.out.println("The user's firstName is " + user.getFirstName());
+			System.out.println("The user's lastName is " + user.getLastName());
+			System.out.println("The user's e-mail is " + user.getEmail());
+			System.out.println("The user's password is " + user.getPassword());
+			System.out.println("The user's address is ");
+			
+			System.out.println("Street: " + user.userAddress.getStreet());
+			System.out.println(" City: " + user.userAddress.getCityName());
+			System.out.println("State: " + user.userAddress.getStateName());
+			System.out.println("Zipcode: " + user.userAddress.getZipcode());
+			
+			System.out.println("The User's Order Item: " + user.userOrder.getItem());
+			System.out.println("The User's Order Quantity: " + user.userOrder.getQuantity());
+			System.out.println("The User's UserID: " + user.userOrder.getUserID());
+			System.out.println("The ShippingAddress is ");
+			System.out.println("The User's Orders Cost: " + user.userOrder.getCost());
+			
+			System.out.println("The User's Shipping Street: " + user.userOrder.shippingAddress.getStreet());
+			System.out.println("The User's Shipping City: " + user.userOrder.shippingAddress.getCityName());
+			System.out.println("The User's Shipping State: " + user.userOrder.shippingAddress.getStateName());
+			System.out.println("The User's Shipping Zipcode: " + user.userOrder.shippingAddress.getZipcode());
+			
+			
+			
+		}
+	}
 	
 
 	public static void main(String[] args) {
@@ -9,7 +41,6 @@ public class ListLists {
 		
         // The user list
 		
-		List<User> users = new ArrayList<User>();
 		User user1 = new User();
 	
 		user1.setFirstName( "John");
@@ -41,14 +72,12 @@ public class ListLists {
 		
 		// Create the order object
 		   
-		List<Order> list1 = new ArrayList<Order>();
 		Order order1 = new Order();
 		user1.userOrder = order1;
 		
 		order1.setItem("kite", "phone", "jeans", "book" );
 		order1.setQuantity("4");
 		order1.setUserID("48732");
-		order1.setShippingAddress("North Berwick", "Fox Farm Hill Rd", "Maine", "04739");
 		order1.setCost("380");
 		
 		
@@ -60,7 +89,7 @@ public class ListLists {
 		order2.setItem("hat", "CD", "movie", "glasses" );
 		order2.setQuantity("4");
 		order2.setUserID("32845");
-		order2.setShippingAddress("North Berwick", "Fox Farm Hill Rd", "Maine", "04739");
+		
 		order2.setCost("230");
 		
 		Order order3 = new Order();
@@ -69,7 +98,6 @@ public class ListLists {
 		order3.setItem("cup", "xbox", "fifa", "controller" );
 		order3.setQuantity("4");
 		order3.setUserID("32845");
-		order3.setShippingAddress("North Berwick", "Fox Farm Hill Rd", "Maine", "04739");
 		order3.setCost("450");
 		
 		// Create the address object

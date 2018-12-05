@@ -5,8 +5,8 @@ public class Order {
 		private String item;
 	    private String quantity;
 	    private String userID;
-	    private String ShippingAddress;
 	    private String cost;	
+	    Address shippingAddress = new Address();
 	   
 		public String getItem() {
 			return item;
@@ -26,12 +26,7 @@ public class Order {
 		public void setUserID(String string) {
 			this.userID = string;
 		}
-		public String getShippingAddress() {
-			return ShippingAddress;
-		}
-		public void setShippingAddress(String shippingAddress, String string, String string2, String string3) {
-			ShippingAddress = shippingAddress;
-		}
+		
 		public String getCost() {
 			return cost;
 		}

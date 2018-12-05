@@ -1,0 +1,5 @@
+cat: the word says meow
+dog:the word says woof
+fish: the word says blub
+giraffe: the word has a long neck
+coding: the word is something you do one computer

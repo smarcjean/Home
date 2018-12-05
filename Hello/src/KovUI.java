@@ -29,8 +29,10 @@ public class KovUI {
 	private JTextField textFieldUserID;
 	private JTextField textFieldShippingAddress;
 	private JTextField textFieldCost;
-	private JLabel lblNewLabel;
-	private JTextField textField;
+	private JTextField textFieldAddressStreet;
+	private JTextField textFieldAddressCity;
+	private JTextField textFieldAddressState;
+	private JTextField textFieldAddressZipcode;
 
 
 	/**
@@ -61,7 +63,7 @@ public class KovUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 614, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -73,24 +75,20 @@ public class KovUI {
 				newUser.setLastName(textFieldLastName.getText());
 				newUser.setEmail(textFieldEmail.getText());
 				newUser.setPassword(textFieldPassword.getText());
-				System.out.println("The name of the user is " + newUser.getFirstName() + " " + newUser.getLastName());
-				System.out.println("The user's email is " + newUser.getEmail());
-				System.out.println("The user's password is " + newUser.getPassword());
+				
 				
 				//User's address
 				Address newAddress = new Address();
 				newUser.userAddress = newAddress;
 				
 				newAddress.setStreet(textFieldStreet.getText());
-				newAddress.setCityName(textFieldStreet.getText());
+				newAddress.setCityName(textFieldCity.getText());
 				newAddress.setStateName(textFieldState.getText());
 				newAddress.setZipcode(textFieldZipcode.getText());
-				System.out.println("The User's Street is " + newUser.userAddress.getStreet());
-				System.out.println("The User's City is " + newUser.userAddress.getCityName());
-				System.out.println("The User's State is " + newUser.userAddress.getStateName());
-				System.out.println("The User's Zipcode is " + newUser.userAddress.getZipcode());
-				 
 				
+				 
+				List<User> userList = ListLists.users;
+				userList.add(newUser);
 				// user's order
 				
 				Order newOrder = new Order();
@@ -99,17 +97,16 @@ public class KovUI {
 				newOrder.setItem(textFieldItem.getText(), null, null, null);
 				newOrder.setQuantity(textFieldQuantity.getText());
 				newOrder.setUserID(textFieldUserID.getText());
-				newOrder.setShippingAddress(textFieldShippingAddress.getText(), null, null, null);
 				newOrder.setCost(textFieldCost.getText());
-				System.out.println("The User's Order Item " + newUser.userOrder.getItem());
-				System.out.println("The User's Order Quantity is " + newUser.userOrder.getQuantity());
-				System.out.println("The User's UserID is " + newUser.userOrder.getUserID());
-				System.out.println("The User's ShippingAddress is " + newUser.userOrder.getShippingAddress());
-				System.out.println("The User's Orders Cost is " + newUser.userOrder.getCost());
+				  
 				
+				newOrder.shippingAddress.setStreet(textFieldAddressStreet.getText());
+				newOrder.shippingAddress.setCityName(textFieldAddressCity.getText());
+				newOrder.shippingAddress.setStateName(textFieldAddressState.getText());
+				newOrder.shippingAddress.setZipcode(textFieldAddressZipcode.getText());
 				
-				
-				
+				ListLists.printList();
+			
 				
 			}
 		});
@@ -200,6 +197,30 @@ public class KovUI {
 		textFieldCost.setBounds(272, 182, 86, 20);
 		frame.getContentPane().add(textFieldCost);
 		textFieldCost.setColumns(10);
+		
+		JLabel lblShippingAdress = new JLabel("Shipping Adress");
+		lblShippingAdress.setBounds(418, 23, 105, 18);
+		frame.getContentPane().add(lblShippingAdress);
+		
+		textFieldAddressStreet = new JTextField();
+		textFieldAddressStreet.setBounds(416, 63, 86, 20);
+		frame.getContentPane().add(textFieldAddressStreet);
+		textFieldAddressStreet.setColumns(10);
+		
+		textFieldAddressCity = new JTextField();
+		textFieldAddressCity.setBounds(418, 94, 86, 20);
+		frame.getContentPane().add(textFieldAddressCity);
+		textFieldAddressCity.setColumns(10);
+		
+		textFieldAddressState = new JTextField();
+		textFieldAddressState.setBounds(416, 125, 86, 20);
+		frame.getContentPane().add(textFieldAddressState);
+		textFieldAddressState.setColumns(10);
+		
+		textFieldAddressZipcode = new JTextField();
+		textFieldAddressZipcode.setBounds(418, 156, 86, 20);
+		frame.getContentPane().add(textFieldAddressZipcode);
+		textFieldAddressZipcode.setColumns(10);
 		
 		
 		

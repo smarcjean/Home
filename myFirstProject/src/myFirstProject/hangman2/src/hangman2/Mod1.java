@@ -60,7 +60,7 @@ public class Mod1 {
 	     
 	     // to find if two string objects are equals you use s.equals
 	     
-	     System.out.print("yes or no?");
+	   /*  System.out.print("yes or no?");
 	     String s = console.next();
 	     if (s.equals("yes")) {
 	    	 processYes(); 
@@ -69,7 +69,7 @@ public class Mod1 {
 	     } else {
 	    	 System.out.println("You didn't type yes or no");
 	     }
-	     // 
+	     */
 	   
 	     // to cast a type you put in a parentheses (int) or (double)
 	     
@@ -91,7 +91,7 @@ public class Mod1 {
 	    	//	 sum += next;
 	    		 
 	     // returning staments
-	     public static int max(int x, int y) {
+	   /*  public static int max(int x, int y) {
 	    	 if (x > y) {
 	    		 return x;
 	    	 } else {
@@ -108,7 +108,7 @@ public class Mod1 {
 	    // to declare and array
 	     int[] temperature = new int[3];
 	    
-	    
+	    */
 	}
 
 }

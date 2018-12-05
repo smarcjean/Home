@@ -8,7 +8,7 @@ public class User {
 	public String lastName;
 	public String email;
 	public String password;
-	public String address;
+	
 	Address userAddress = new Address();
 	Order userOrder = new Order();
 	
@@ -36,6 +36,10 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public void add() {
+		
+		
 	}
 	
 
