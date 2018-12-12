@@ -39,9 +39,9 @@ public class Hangman7 {
 	public String mask() {
 	    String mask = "";
 		
-		for (int m = 0; m < word.length(); m++) {
+		for (int j = 0; j < word.length(); j++) {
 									
-			String wordToGuessChar = String.valueOf(word.charAt(m));
+			String wordToGuessChar = String.valueOf(word.charAt(j));
 			if (guesses.contains(wordToGuessChar)) {
 				mask += wordToGuessChar;
 			} 
@@ -52,14 +52,11 @@ public class Hangman7 {
 		}
 		return mask;
 	}
-   
-	
-	public boolean wordIsGuessed() {
 		
-		
-		return !mask().contains("*");
-		
-	}
+		public boolean wordIsGuessed() {
+			return !mask().contains("*");
+			
+		}
 	
 	public boolean noMoreChances() {
 		return chances == 0;

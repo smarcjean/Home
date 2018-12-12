@@ -14,6 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 
 public class KovUI {
+	ListLists listLists = new ListLists();
+
 
 	private JFrame frame;
 	private JTextField textFieldFirstName;
@@ -67,32 +69,30 @@ public class KovUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnAnswer = new JButton("User's Info");
+		JButton btnAnswer = new JButton("Save User Input");
 		btnAnswer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				User newUser = new User();
-				newUser.setFirstName(textFieldFirstName.getText());
-				newUser.setLastName(textFieldLastName.getText());
-				newUser.setEmail(textFieldEmail.getText());
-				newUser.setPassword(textFieldPassword.getText());
+				User users = new User();
+				users.setFirstName(textFieldFirstName.getText());
+				users.setLastName(textFieldLastName.getText());
+				users.setEmail(textFieldEmail.getText());
+				users.setPassword(textFieldPassword.getText());
 				
 				
 				//User's address
 				Address newAddress = new Address();
-				newUser.userAddress = newAddress;
 				
 				newAddress.setStreet(textFieldStreet.getText());
 				newAddress.setCityName(textFieldCity.getText());
 				newAddress.setStateName(textFieldState.getText());
 				newAddress.setZipcode(textFieldZipcode.getText());
 				
+				
 				 
-				List<User> userList = ListLists.users;
-				userList.add(newUser);
-				// user's order
+				
 				
 				Order newOrder = new Order();
-				newUser.userOrder = newOrder;
+				users.userOrder = newOrder;
 				
 				newOrder.setItem(textFieldItem.getText(), null, null, null);
 				newOrder.setQuantity(textFieldQuantity.getText());
@@ -105,7 +105,7 @@ public class KovUI {
 				newOrder.shippingAddress.setStateName(textFieldAddressState.getText());
 				newOrder.shippingAddress.setZipcode(textFieldAddressZipcode.getText());
 				
-				ListLists.printList();
+				listLists.Save(u);
 			
 				
 			}
