@@ -1,7 +1,7 @@
-package games;
+package soccer;
 
 public class Game {
-	private int chances = 5;
+	private int tries = 5;
 	private String answer;
 	private String question;
 	private String userGuess;
@@ -26,26 +26,26 @@ public class Game {
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
-	public int getChances() {
-		return chances;
+	public int getTries() {
+		return tries;
 	}
-	public void setChances(int chances) {
-		this.chances = chances;
+	public void setTries(int Tries) {
+		this.tries = Tries;
 	}
 	
-	public boolean outOfChances() {
-		return chances == 0;
+	public boolean outOfTries() {
+		return tries == 0;
 	}
 	public boolean end (){
-		if (outOfChances() == true) {
+		if (outOfTries() == true) {
 		
 			return true;
-		} else {
+			
+	}  else {
 			return false;
-		}
-	
 	}
-}
-
-
+	
+   }
+	
+ }
 

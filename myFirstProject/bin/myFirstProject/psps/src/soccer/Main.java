@@ -1,18 +1,12 @@
-package games;
+package soccer;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
-
-
-
-
 
 public class Main {
 	public static int incorrect = 0;
 
-	 
+ 
 	public static List<Game> loadingGames() throws IOException {
 		ArrayList<Game> games = new ArrayList<Game>();
 		
@@ -28,15 +22,15 @@ public class Main {
 			g.setAnswer(line[1]);
 			games.add(g);	
 			
-		}
-		br.close();
+		   }
+		    br.close();
 		
-		return games;
-	}
+		    return games;
+	    }
  
 	public static void startGame(Game game) {
 		Scanner console = new Scanner(System.in);
-		while (!game.outOfChances() && !game.answerIsGuessed) {
+		while (!game.outOfTries() && !game.answerIsGuessed) {
 			System.out.println();
 			System.out.println("Question:" );
 			System.out.println();
@@ -44,19 +38,25 @@ public class Main {
 			System.out.println("Answer: " );
 			game.setUserGuess(console.next());
 			 
-			if(game.getUserGuess().equals(game.getAnswer()))
+			if(game.getUserGuess().equalsIgnoreCase(game.getAnswer()))
 			{
 				System.out.println("Your answer is correct.");
 				game.answerIsGuessed = true;
 			}
 			else {
-				System.out.println("Your answer is incorrect! You have lost one chance.");
-				game.setChances(game.getChances()- 1);
-				System.out.println("Your chances are " + game.getChances());
+				System.out.println("Your answer is incorrect.");
+				game.setTries(game.getTries()- 1);
+				System.out.println("You have " + game.getTries() + (" tries"));
 			}
 			 
-			if (game.outOfChances()) {
+			if (game.outOfTries()) {
 				System.out.println("You are out of chances!");
+				game.getAnswer();
+				game.answerIsGuessed = true;
+				System.out.println("Answer: " + game.getAnswer());
+				
+				
+				
 				incorrect++;
 			}
 			
@@ -65,7 +65,12 @@ public class Main {
 	
  
 	public static void main(String[] args) {
+		
+		
 		System.out.println("Welcome to the game!");
+		System.out.println("You will be asked a question and you give the answer.");
+		System.out.println("If run out of tries and not know the answer");
+		System.out.println("The game will give you the answer");
 		List<Game> games;
 		try {
 			games = Main.loadingGames();
@@ -82,4 +87,3 @@ public class Main {
 		}
 	}
 } 
-
