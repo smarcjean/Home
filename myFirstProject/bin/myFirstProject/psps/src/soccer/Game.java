@@ -2,8 +2,8 @@ package soccer;
 
 public class Game {
 	private int tries = 5;
-	private String answer;
-	private String question;
+	 String answer;
+	 String question;
 	private String userGuess;
 	public boolean answerIsGuessed = false;
 	

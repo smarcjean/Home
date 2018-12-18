@@ -7,7 +7,11 @@
 		private String userGuess;
 		public boolean answerIsGuessed = false;
 		
-		
+		public void setGame(String question, String answer) {
+			this.question = question;
+			this.answer = answer;
+					
+		}
 		public String getUserGuess() {
 			return userGuess;
 		}

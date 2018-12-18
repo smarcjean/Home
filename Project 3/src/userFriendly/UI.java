@@ -89,21 +89,25 @@
 			frame.getContentPane().add(lblPassword);
 			
 			textFieldFirstName = new JTextField();
+			textFieldFirstName.setText("Mark");
 			textFieldFirstName.setBounds(95, 68, 132, 30);
 			frame.getContentPane().add(textFieldFirstName);
 			textFieldFirstName.setColumns(10);
 			
 			textFieldLastName = new JTextField();
+			textFieldLastName.setText("John");
 			textFieldLastName.setBounds(98, 106, 127, 30);
 			frame.getContentPane().add(textFieldLastName);
 			textFieldLastName.setColumns(10);
 			
 			textFieldEmail = new JTextField();
+			textFieldEmail.setText("Markjohn@gmail.com");
 			textFieldEmail.setBounds(98, 147, 127, 30);
 			frame.getContentPane().add(textFieldEmail);
 			textFieldEmail.setColumns(10);
 			
 			textFieldPassword = new JTextField();
+			textFieldPassword.setText("donuts");
 			textFieldPassword.setBounds(98, 188, 127, 30);
 			frame.getContentPane().add(textFieldPassword);
 			textFieldPassword.setColumns(10);
@@ -129,21 +133,25 @@
 			frame.getContentPane().add(lblZipcode);
 			
 			textFieldStreet = new JTextField();
+			textFieldStreet.setText("BlueBery Hill");
 			textFieldStreet.setBounds(349, 71, 127, 20);
 			frame.getContentPane().add(textFieldStreet);
 			textFieldStreet.setColumns(10);
 			
 			textFieldCity = new JTextField();
+			textFieldCity.setText("North Berwick");
 			textFieldCity.setBounds(349, 112, 127, 20);
 			frame.getContentPane().add(textFieldCity);
 			textFieldCity.setColumns(10);
 			
 			textFieldState = new JTextField();
+			textFieldState.setText("ME");
 			textFieldState.setBounds(349, 147, 127, 20);
 			frame.getContentPane().add(textFieldState);
 			textFieldState.setColumns(10);
 			
 			textFieldZipcode = new JTextField();
+			textFieldZipcode.setText("04708");
 			textFieldZipcode.setBounds(349, 188, 127, 20);
 			frame.getContentPane().add(textFieldZipcode);
 			textFieldZipcode.setColumns(10);
@@ -169,21 +177,25 @@
 			frame.getContentPane().add(lblCost);
 			
 			textFieldItem = new JTextField();
+			textFieldItem.setText("laptop, charger");
 			textFieldItem.setBounds(625, 71, 120, 20);
 			frame.getContentPane().add(textFieldItem);
 			textFieldItem.setColumns(10);
 			
 			textFieldQuantity= new JTextField();
+			textFieldQuantity.setText("2");
 			textFieldQuantity.setBounds(625, 109, 120, 20);
 			frame.getContentPane().add(textFieldQuantity);
 			textFieldQuantity.setColumns(10);
 			
 			textFieldUserID = new JTextField();
+			textFieldUserID.setText("98765");
 			textFieldUserID.setBounds(625, 147, 120, 20);
 			frame.getContentPane().add(textFieldUserID);
 			textFieldUserID.setColumns(10);
 			
 			textFieldCost = new JTextField();
+			textFieldCost.setText("480");
 			textFieldCost.setBounds(623, 188, 122, 20);
 			frame.getContentPane().add(textFieldCost);
 			textFieldCost.setColumns(10);

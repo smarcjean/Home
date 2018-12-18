@@ -9,17 +9,17 @@
 		
 		// Load lists of questions with answers
 		// Ability to know when the right answer is guessed
-		// Load questions for a file
+		// Load questions from a file
 		// Use UI
 		
 		
 		public class Main {
 			
 			public static int incorrect = 0;
-	
+		static	ArrayList<Game> games = new ArrayList<Game>();
+			
 			 
 			public static List<Game> loadingGames() throws IOException {
-				ArrayList<Game> games = new ArrayList<Game>();
 				
 				
 				BufferedReader br = new BufferedReader(new FileReader("GameQuestions.txt"));
@@ -38,7 +38,9 @@
 				
 				    return games;
 			    }
-		 
+		 public void load() {
+			 games.getClass();
+		 }
 			public static void startGame(Game game) {
 				Scanner console = new Scanner(System.in);
 				while (!game.outOfTries() && !game.answerIsGuessed) {

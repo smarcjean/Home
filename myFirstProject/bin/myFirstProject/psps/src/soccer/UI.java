@@ -6,13 +6,17 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 public class UI {
 	Game g = new Game();
 	Main m = new Main();
-	
+	public static int incorrect = 0;
+	ArrayList<Game> games = new ArrayList<Game>();
 
 	private JFrame frame;
 	private JTextField textFieldQuestion;
@@ -64,8 +68,8 @@ public class UI {
 			public void actionPerformed(ActionEvent arg0) {
 				
 			
-				textFieldQuestion.setText("");
-				System.out.println(textFieldQuestion.getText());
+				textFieldQuestion.setText("Question is " + g.getQuestion());
+				System.out.println("Answer is " + g.getAnswer());
 				
 				
 			}
@@ -76,21 +80,23 @@ public class UI {
 		btnResults = new JButton("Results");
 		btnResults.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				m.load(g);
 				
-				Main m = new Main();
-				
-				System.out.println("");
+		String questions = textFieldQuestion.getText().toString();
+		String answers = textFieldAnswer.getText().toString();
+						
+		
 			
 			}
 		});
 		btnResults.setBounds(250, 185, 89, 23);
 		frame.getContentPane().add(btnResults);
 		
-		lblQuestions = new JLabel("Questions");
+		lblQuestions = new JLabel("Question");
 		lblQuestions.setBounds(43, 21, 80, 14);
 		frame.getContentPane().add(lblQuestions);
 		
-		lblAnswers = new JLabel("Answers");
+		lblAnswers = new JLabel("Answer");
 		lblAnswers.setBounds(482, 21, 46, 14);
 		frame.getContentPane().add(lblAnswers);
 		
@@ -103,8 +109,10 @@ public class UI {
 		lblQuestionIs.setBounds(25, 67, 59, 14);
 		frame.getContentPane().add(lblQuestionIs);
 		
-		lblAnswerIs = new JLabel("Answer is");
+		lblAnswerIs = new JLabel("AnswerIs");
 		lblAnswerIs.setBounds(393, 67, 46, 14);
 		frame.getContentPane().add(lblAnswerIs);
 	}
+
+	
 }
